@@ -74,45 +74,72 @@ typedef struct Trie {
 
 You must implement the following functions:
 
-### 1. `Trie* createTrie();`
-
+### 1. Create Trie function
+**Function Prototype**:
+```c
+Trie* createTrie();
+```
 -   **Purpose**: Initializes and returns a new empty trie.
 -   **Input**: None.
 -   **Output**: A pointer to the created Trie.
 
-### 2. `void insertWord(Trie* trie, const char* word);`
+### 2. Insert word function
+**Function Prototype**:
+```c
+void insertWord(Trie* trie, const char* word);
+```
 
 -   **Purpose**: Inserts a word into the trie.
 -   **Input**: The trie pointer and the word to insert.
 -   **Output**: None.
 
-### 3. `bool searchWord(Trie* trie, const char* word);`
+### 3. Search word function
+**Function Prototype**:
+```c
+bool searchWord(Trie* trie, const char* word);
+```
 
 -   **Purpose**: Searches for a word in the trie.
 -   **Input**: The trie pointer and the word to search.
 -   **Output**: Returns `true` if the word exists, `false` otherwise.
 
-### 4. `void deleteWord(Trie* trie, const char* word);`
+### 4. Delete word function
+**Function Prototype**:
+```c
+void deleteWord(Trie* trie, const char* word);
+```
 
 -   **Purpose**: Deletes a word from the trie.
 -   **Input**: The trie pointer and the word to delete.
 -   **Output**: None.
 -   **Note**: If a node has no children, free its memory. Additionally, free the memory of its parent nodes if they do not mark the end of another word. For example, in the provided trie image, deleting the word `apple` requires freeing the memory for the nodes `e` and `l`, as they are no longer needed. However, do not free the memory for the node `p` because it is still needed for the word `app`.
 
-### 5. `void saveTrie(Trie* trie, const char* filename);`
+### 5. Save Trie function
+**Function Prototype**:
+```c
+void saveTrie(Trie* trie, const char* filename);
+```
 
 -   **Purpose**: Saves the entire trie to a file.
 -   **Input**: The trie pointer and the filename.
 -   **Output**: None.
 -   **Note**: You have the flexibility to implement this function in any manner you prefer. We provide you with the `trie` and the `filename`, and you can write to this file in any format you choose. The only requirement is that the file must be structured in such a way that it can be loaded exactly as it was in the loadTrie function later. You can use either binary or text format, as per your preference.
 
-### 6. `Trie* loadTrie(const char* filename);`
+### 6. Load Trie function
+**Function Prototype**:
+```c
+Trie* loadTrie(const char* filename);
+```
 
 -   **Purpose**: Loads a trie from a file. We will use the file that you have saved using your own code. you have to create the exact same Trie that you have saved previously.
 -   **Input**: The filename.
 -   **Output**: A pointer to the loaded trie.
 
-### 7. `void freeTrie(Trie* trie);`
+### 7. Free Trie function
+**Function Prototype**:
+```c
+void freeTrie(Trie* trie);
+```
 
 -   **Purpose**: Frees all dynamically allocated memory associated with the trie.
 -   **Input**: The trie pointer.
